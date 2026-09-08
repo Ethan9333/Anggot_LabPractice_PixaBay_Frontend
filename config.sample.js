@@ -1,3 +1,3 @@
 const CONFIG = {
-  PIXABAY_API_KEY: "57360453-ec93885e71604ddaefd8e2294"
+  PIXABAY_API_KEY: "samplekey"
 };
