@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pixabay Media Search</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Pixabay Media Finder</h1>
+      <p>Search photos or videos, or explore quick challenges below.</p>
+    </header>
+
+    
+    <section class="search-section">
+      <form id="search-form">
+        <input 
+          type="text" 
+          id="search-input" 
+          placeholder="Type your search term..." 
+          required 
+        />
+        <select id="type-select">
+          <option value="photo">Photos</option>
+          <option value="video">Videos</option>
+        </select>
+        <button type="submit" id="search-btn">Search</button>
+      </form>
+    </section>
+
+   
+    <section class="challenges-section">
+      <h2>Quick Challenges</h2>
+      <div class="challenge-buttons">
+        <button class="challenge-btn" data-query="rocket launch" data-type="photo">Rocket Launch</button>
+        <button class="challenge-btn" data-query="basketball" data-type="photo">Basketball</button>
+        <button class="challenge-btn" data-query="forest" data-type="photo">Forest</button>
+        <button class="challenge-btn" data-query="road forest" data-type="photo">Road Forest</button>
+      </div>
+    </section>
+
+   
+    <div id="loading" class="spinner-container hidden">
+      <div class="spinner"></div>
+      <p>Fetching results...</p>
+    </div>
+
+   
+    <div id="error-message" class="error-message hidden"></div>
+
+   
+    <main id="results-grid" class="results-grid"></main>
+  </div>
+
+  
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
